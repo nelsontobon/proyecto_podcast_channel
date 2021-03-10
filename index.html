@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast channel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/b925ec4270.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <img class="logo" src="img/logo.svg" alt="logo">
+        </div>
+
+        <div class="desplegable">
+            <div>
+                <input type="checkbox" class="menu-check" id="menu">
+
+                <label class="menu-label" for="menu">
+                    <i class="fa fa-bars" id="barras" aria-hidden="true"></i>
+                </label>
+
+                <label class="menu-label1" for="menu">
+                    <i class="far fa-times-circle"></i>
+                </label>
+
+                <nav class="menu-lista">
+                    <ul>
+                        <li><a href="#">EPISODIOS</a></li>
+                        <li><a href="#">NOSOTROS</a></li>
+                        <li><a href="#">ENTREVISTAS</a></li>
+                        <li><a href="#">TÓPICOS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main-content">
+
+        <section class="inicio">
+            <h2 class="inicio-titulo">Hello <span>world</span> pale blue dot</h2>
+            <p class="inicio-texto">
+                un Podcast que explora el mundo de la programacion. nuevos episodios , todos los jueves cada 15 días.
+            </p>
+            <input type="button" value="CONOCÉ MÁS" id="boton" class="boton">
+        </section>
+
+        <section class="episodios">
+            <h2>Episodios</h2>
+
+            <section class="episodios-content">
+                <iframe src="https://open.spotify.com/embed-podcast/episode/6eCHJ8yOYtksW8OT93Dbdu" width="298"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+                <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="298"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+                <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="298"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+                <iframe src="https://open.spotify.com/embed-podcast/episode/5qoM6yDZ7CspTcJP7xRqZT" width="298"
+                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </section>
+        </section>
+
+        <section class="img-phone">
+            <img class="img-picture" src="./img/phone.png" alt="phone">
+            <article class="img-article">
+                <h2>De dónde venimos</h2>
+                <p>
+                    Our posturings, our imagined self-importance, the delusion that we have some provileged position
+                    in the Universe, are challenged by this point of pale light.
+
+                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this
+                    vastness,there is not hint that help will come from elsewhere to save us from ourselves.
+                </p>
+            </article>
+        </section>
+
+        <section class="galeria">
+            <h2>Invitadas/os estelares</h2>
+            <div class="galeria-content">
+                <img class="galeria-img" src="./img/grace-hopper.png" alt="grace-hopper">
+                <img class="galeria-img" src="./img/Katie-Bouman.png" alt="Katie-Bouman">
+                <img class="galeria-img" src="./img/Margaret_Hamilton.png" alt="Margaret_Hamilton">
+                <img class="galeria-img" src="./img/An E.R.A.Univac 1103 computer in the 1950s.png" alt="Univac">
+                <img class="galeria-img"
+                    src="./img/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
+                    alt="Computer">
+                <img class="galeria-img" src="./img/susan-kare.png" alt="susan-kare">
+            </div>
+        </section>
+
+        <section class="temas">
+            <h2>Algunos de nuestros temas</h2>
+            <div class="temas-content">
+                <div class="temas-item">
+                    <div>
+                        <img class="temas-icon" src="./img/icon1.svg" alt="icon1">
+                    </div>
+                    <h3>Trabajo remoto</h3>
+                </div>
+                <div class="temas-item">
+                    <div>
+                        <img class="temas-icon" src="./img/icon2.svg" alt="icon1">
+                    </div>
+                    <h3>Repensando la programación</h3>
+                </div>
+                <div class="temas-item">
+                    <div>
+                        <img class="temas-icon" src="./img/icon3.svg" alt="icon1">
+                    </div>
+                    <h3>Bases del código</h3>
+                </div>
+                <div class="temas-item">
+                    <div>
+                        <img class="temas-icon" src="./img/icon4.svg" alt="icon1">
+                    </div>
+                    <h3>Seguridad informática</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="novedades">
+            <h2>
+                ¿Querés las últimas novedades?
+            </h2>
+            <input type="button" value="ESCUCHA LOS EPISODIOS" id="boton-fin" class="boton">
+        </section>
+
+    </main>
+    <footer class="footer">
+        <h4> 2019 - hello blue pale dote</h4>
+    </footer>
+</body>
+
+</html>
