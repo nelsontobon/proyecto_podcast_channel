@@ -5,32 +5,48 @@
 
 
 .inicio {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
     width: 100%;
     height: 303px;
-    padding:0px 5% ;
 
-    .inicio-titulo{
-        font-size: 44px;
+
+    .inicio-titulo {
+        span {
+            text-decoration: 2px line-through;
+            margin: 0px;
+        }
+
     }
-    
-    .inicio-titulo span{
-        text-decoration:2px line-through;
-        
+
+
+
+    .inicio-texto {
+        width: 100%;
+        margin: 0px;
     }
-    
-    .inicio-texto{
-        width: 90%;
-        height: 66px;
-        font-size: 14px;
-    
+
+    .boton {
+        align-self: center;
+        margin-top: 20px;
+        border: none;
+        padding: 0px 5%;
     }
 }
 
-.boton{
-    width: 90%;
+.boton {
+    width: 288px;
     height: 44px;
+    @include IBMPlexMono-medium;
     background: #00F3BB 100%;
-} 
+    border: none;
+}
+
+.boton:hover {
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: white;
+}
 
 .episodios {
     display: flex;
@@ -40,52 +56,80 @@
     width: 100%;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     clip-path: polygon(0px 100%, 100% 95%, 100% 0px, 0px 5%);
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 120px;
+
+    .episodios-titulo {
+        width: 100%;
+        padding: 0px 5%;
+        color: white;
+    }
 
     .episodios-content {
         display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-around;
-        height: auto;   
+        flex-flow: column nowrap;
+        height: auto;
         margin-bottom: 20px;
-    
+        flex-grow: 1;
+
+        .episodios-grid {
+            display: flex;
+            flex-flow: row wrap;
+            flex-grow: 1;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            &:nth-child(1n) {
+                margin-right: 5%;
+            }
+        }
+
+        iframe {
+            //width: calc(33.3333% + 104px);
+            width: 280px;
+            margin: 5% 0% 0% 5%;
+
+        }
+
     }
-    
-    .episodios-content iframe{
-        width: 298px;
-        margin: 11px 11px;
-    }
+
 }
-
-
 
 .img-phone {
-    position: relative;
+    display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: auto;
-    width: 100%;   
-    top: -100px;
+    width: 100%;
+    transform: translateY(-100px);
 
-    .img-picture{
-        width: 360px;
-        height: 519px;
-        transform: translateX(-20px);
+    &>div {
+        .img-picture {
+            width: 360px;
+            height: 519px;
+            // transform: translateX(-20px);
+        }
     }
 
-    .img-article{
+
+    .img-article {
         display: flex;
         flex-flow: column nowrap;
-        width: auto;
-        padding: 16px;
+        align-items: flex-start;
+        width: 90%;
+        height: auto;
+        margin-top: 27px;
+
+        p {
+            margin-top: 8px;
+        }
     }
 }
 
-.galeria{
-    .galeria-content{
+.galeria {
+    .galeria-content {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -94,54 +138,122 @@
         height: auto;
     }
 
-    .galeria-img{
-        width: 320px ;
+    h2 {
+        margin-bottom: 14px;
+    }
+
+    .galeria-img {
+        width: 320px;
         height: 248px;
         margin: 0px;
         padding: 0px;
     }
 }
 
-.temas{
+.temas {
     display: flex;
     flex-flow: column nowrap;
-    .temas-content{
+    margin-top: 48px;
+
+    .temas-content {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: center;
+        align-content: space-around;
+        justify-content: space-around;
     }
 
-    .temas-item{
+    .temas-item {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        margin: 26px 0px;
 
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 320px;
-            height: 130px;
+        img {
+            width: 104px;
+            height: 104px;
+            margin: 13px;
         }
 
-        h3{
-        text-align: center;
-           width: 228px;
-           height: 32px; 
+        h3 {
+            @include IBMPlexSans-Semibold;
+            font-size: 24px;
+            color: #060A24;
+            letter-spacing: 0;
+            text-align: center;
+            text-align: center;
+            width: 288px;
+            height: 32px;
         }
     }
 
 }
 
-.novedades{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 10%);
-    height: 341px;
+
+
+.footer {
+
+    .footer-novedades {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 10%);
+        height: 341px;
+
+        h2 {
+            color: white;
+        }
+
+        .boton {
+            display: inline-block;
+            margin: 36px 0px;
+        }
+    }
+
+    .footer-copy {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 24px 0px 31px;
+
+        p,.redes{
+            width: 288px;
+            margin-bottom: 16px;
+        }
+        .redes {
+            i{
+                margin: 0px 19px; 
+                width: 16px;    
+            }
+        }
+    }
+
+}
+
+@media (min-width: 388px) {
+    .episodios {
+        .episodios-content {
+            iframe {
+                width: 80%;
+                margin: 5% 0% 0% 5%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .episodios {
+        .episodios-content {
+            iframe {
+                width: calc(50% - 10vh + 2px);
+                margin: 5% 0% 0% 5%;
+            }
+        }
+    }
 }

@@ -43,38 +43,46 @@
     <main class="main-content">
 
         <section class="inicio">
-            <h2 class="inicio-titulo">Hello <span>world</span> pale blue dot</h2>
+            <h2 class="inicio-titulo">Hello <span>world</span> <br> pale blue dot</h2>
             <p class="inicio-texto">
-                un Podcast que explora el mundo de la programacion. nuevos episodios , todos los jueves cada 15 días.
+                Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
             </p>
-            <input type="button" value="CONOCÉ MÁS" id="boton" class="boton">
+            <input type="button" value="CONOCÉ MÁS" class="boton">
         </section>
 
         <section class="episodios">
-            <h2>Episodios</h2>
+            <h2 class="episodios-titulo">Episodios</h2>
 
             <section class="episodios-content">
-                <iframe src="https://open.spotify.com/embed-podcast/episode/6eCHJ8yOYtksW8OT93Dbdu" width="298"
-                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="episodios-grid">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/6eCHJ8yOYtksW8OT93Dbdu" width="298"
+                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-                <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="298"
-                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="298"
+                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
 
-                <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="298"
-                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div class="episodios-grid">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="298"
+                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-                <iframe src="https://open.spotify.com/embed-podcast/episode/5qoM6yDZ7CspTcJP7xRqZT" width="298"
-                    height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/5qoM6yDZ7CspTcJP7xRqZT" width="298"
+                        height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+
             </section>
         </section>
 
         <section class="img-phone">
-            <img class="img-picture" src="./img/phone.png" alt="phone">
+            <div>
+                <img class="img-picture" src="./img/phone.png" alt="phone">
+            </div>
+
             <article class="img-article">
                 <h2>De dónde venimos</h2>
                 <p>
                     Our posturings, our imagined self-importance, the delusion that we have some provileged position
-                    in the Universe, are challenged by this point of pale light.
+                    in the Universe, are challenged by this point of pale light. <br><br>
 
                     Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this
                     vastness,there is not hint that help will come from elsewhere to save us from ourselves.
@@ -100,43 +108,47 @@
             <h2>Algunos de nuestros temas</h2>
             <div class="temas-content">
                 <div class="temas-item">
-                    <div>
-                        <img class="temas-icon" src="./img/icon1.svg" alt="icon1">
-                    </div>
+                    <img class="temas-icon" src="./img/icon1.svg" alt="icon1">
                     <h3>Trabajo remoto</h3>
                 </div>
                 <div class="temas-item">
-                    <div>
-                        <img class="temas-icon" src="./img/icon2.svg" alt="icon1">
-                    </div>
+                    <img class="temas-icon" src="./img/icon2.svg" alt="icon1">
                     <h3>Repensando la programación</h3>
                 </div>
                 <div class="temas-item">
-                    <div>
-                        <img class="temas-icon" src="./img/icon3.svg" alt="icon1">
-                    </div>
+                    <img class="temas-icon" src="./img/icon3.svg" alt="icon1">
                     <h3>Bases del código</h3>
                 </div>
                 <div class="temas-item">
-                    <div>
-                        <img class="temas-icon" src="./img/icon4.svg" alt="icon1">
-                    </div>
+                    <img class="temas-icon" src="./img/icon4.svg" alt="icon1">
                     <h3>Seguridad informática</h3>
                 </div>
             </div>
         </section>
 
-        <section class="novedades">
+    </main>
+    <footer class="footer">
+        <section class="footer-novedades">
             <h2>
                 ¿Querés las últimas novedades?
             </h2>
-            <input type="button" value="ESCUCHA LOS EPISODIOS" id="boton-fin" class="boton">
+            <input type="button" value="ESCUCHÁ LOS EPISODIOS" id="boton-fin" class="boton">
         </section>
-
-    </main>
-    <footer class="footer">
-        <h4> 2019 - hello blue pale dote</h4>
+        <section class="footer-copy">
+            <p> &copy  2019— Hello blue pale dot</p>
+            
+            <div class="redes">
+                <i class="fab fa-spotify"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-telegram"></i>
+            </div>
+        </section>  
     </footer>
+
+    
+
 </body>
 
 </html>

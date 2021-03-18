@@ -2,6 +2,8 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
@@ -13,6 +15,27 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+}
+
+h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 42px;
+  font-weight: normal;
+  padding: 0px 5%;
+}
+
+p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 0px 5%;
 }
 
 .header {
@@ -37,7 +60,7 @@ body {
   margin: 15px;
 }
 
-.menu-lista {
+.header .menu-lista {
   display: none;
   position: absolute;
   background-color: #0000EC;
@@ -46,66 +69,50 @@ body {
   top: 52px;
 }
 
-@-webkit-keyframes menu-lista-invisible {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 100%;
-  }
+.header .menu-lista > ul {
+  height: 184px;
 }
 
-@keyframes menu-lista-invisible {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 100%;
-  }
+.header .menu-lista > ul > li {
+  display: block;
+  list-style: none;
+  margin: 24px 16px;
 }
 
-.menu-lista > ul > li > a {
+.header .menu-lista > ul > li > a {
   text-decoration: none;
   color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  font-size: 16px;
 }
 
-.menu-lista > ul > li {
-  list-style: none;
-  margin-top: 16px;
-  margin-bottom: 16px;
+.header .menu-lista > ul > li > a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
 }
 
-.menu-check {
+.header .menu-lista > ul > li > a:active {
+  color: rgba(6, 10, 36, 0.56);
+}
+
+.header .menu-check {
   display: none;
 }
 
-.menu-label {
-  cursor: pointer;
-}
-
-.menu-label1 {
+.header .menu-check:checked ~ .menu-label {
   display: none;
 }
 
-.menu-check:checked ~ .menu-label1 {
+.header .menu-check:checked ~ .menu-label1 {
   display: block;
 }
 
-.menu-check:checked ~ .menu-label {
-  display: none;
-}
-
-.menu-check:checked ~ .menu-lista {
+.header .menu-check:checked ~ .menu-lista {
+  display: block;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-animation: menu-lista-visible 0.5s linear;
           animation: menu-lista-visible 0.5s linear;
   -webkit-animation-direction: normal;
@@ -113,6 +120,14 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   top: 52px;
+}
+
+.header .menu-label {
+  cursor: pointer;
+}
+
+.header .menu-label1 {
+  display: none;
 }
 
 @-webkit-keyframes menu-lista-visible {
@@ -155,7 +170,7 @@ body {
     margin-left: 100px;
     margin-right: 100px;
   }
-  .menu-lista {
+  .header .menu-lista {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -164,12 +179,7 @@ body {
     height: 80px;
     width: 400px;
   }
-  .menu-label1,
-  .menu-label,
-  .menu-check {
-    display: none;
-  }
-  .menu-lista > ul {
+  .header .menu-lista > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -181,9 +191,14 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .menu-lista > ul > li > a {
+  .header .menu-lista > ul > li > a {
     text-decoration: none;
     color: black;
+  }
+  .header .menu-label1,
+  .header .menu-label,
+  .header .menu-check {
+    display: none;
   }
 }
 
@@ -199,30 +214,52 @@ body {
 }
 
 .inicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   height: 303px;
-  padding: 0px 5%;
-}
-
-.inicio .inicio-titulo {
-  font-size: 44px;
 }
 
 .inicio .inicio-titulo span {
   -webkit-text-decoration: 2px line-through;
           text-decoration: 2px line-through;
+  margin: 0px;
 }
 
 .inicio .inicio-texto {
-  width: 90%;
-  height: 66px;
-  font-size: 14px;
+  width: 100%;
+  margin: 0px;
+}
+
+.inicio .boton {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+  border: none;
+  padding: 0px 5%;
 }
 
 .boton {
-  width: 90%;
+  width: 288px;
   height: 44px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
   background: #00F3BB 100%;
+  border: none;
+}
+
+.boton:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: white;
 }
 
 .episodios {
@@ -241,11 +278,62 @@ body {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   -webkit-clip-path: polygon(0px 100%, 100% 95%, 100% 0px, 0px 5%);
           clip-path: polygon(0px 100%, 100% 95%, 100% 0px, 0px 5%);
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 120px;
 }
 
+.episodios .episodios-titulo {
+  width: 100%;
+  padding: 0px 5%;
+  color: white;
+}
+
 .episodios .episodios-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.episodios .episodios-content .episodios-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.episodios .episodios-content .episodios-grid:nth-child(1n) {
+  margin-right: 5%;
+}
+
+.episodios .episodios-content iframe {
+  width: 280px;
+  margin: 5% 0% 0% 5%;
+}
+
+.img-phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,39 +344,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.episodios .episodios-content iframe {
-  width: 298px;
-  margin: 11px 11px;
-}
-
-.img-phone {
-  position: relative;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: auto;
   width: 100%;
-  top: -100px;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
-.img-phone .img-picture {
+.img-phone > div .img-picture {
   width: 360px;
   height: 519px;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
 }
 
 .img-phone .img-article {
@@ -299,8 +366,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  width: auto;
-  padding: 16px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  height: auto;
+  margin-top: 27px;
+}
+
+.img-phone .img-article p {
+  margin-top: 8px;
 }
 
 .galeria .galeria-content {
@@ -321,6 +396,10 @@ body {
   height: auto;
 }
 
+.galeria h2 {
+  margin-bottom: 14px;
+}
+
 .galeria .galeria-img {
   width: 320px;
   height: 248px;
@@ -336,6 +415,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  margin-top: 48px;
 }
 
 .temas .temas-content {
@@ -349,9 +429,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .temas .temas-item {
@@ -368,29 +449,28 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 26px 0px;
 }
 
-.temas .temas-item div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 320px;
-  height: 130px;
+.temas .temas-item img {
+  width: 104px;
+  height: 104px;
+  margin: 13px;
 }
 
 .temas .temas-item h3 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #060A24;
+  letter-spacing: 0;
   text-align: center;
-  width: 228px;
+  text-align: center;
+  width: 288px;
   height: 32px;
 }
 
-.novedades {
+.footer .footer-novedades {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,6 +489,57 @@ body {
   -webkit-clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 10%);
           clip-path: polygon(0px 100%, 100% 100%, 100% 0px, 0px 10%);
   height: 341px;
+}
+
+.footer .footer-novedades h2 {
+  color: white;
+}
+
+.footer .footer-novedades .boton {
+  display: inline-block;
+  margin: 36px 0px;
+}
+
+.footer .footer-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 24px 0px 31px;
+}
+
+.footer .footer-copy p, .footer .footer-copy .redes {
+  width: 288px;
+  margin-bottom: 16px;
+}
+
+.footer .footer-copy .redes i {
+  margin: 0px 19px;
+  width: 16px;
+}
+
+@media (min-width: 388px) {
+  .episodios .episodios-content iframe {
+    width: 80%;
+    margin: 5% 0% 0% 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .episodios .episodios-content iframe {
+    width: calc(50% - 10vh + 2px);
+    margin: 5% 0% 0% 5%;
+  }
 }
 
 .footer {

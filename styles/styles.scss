@@ -1,22 +1,5 @@
 @import './variables';
-
-*{
-    box-sizing: border-box;
-}
-
-html{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    padding: 0px
-}
-
+@import './generales';
 @import './header';
 @import './main';
 @import './footer';
-
