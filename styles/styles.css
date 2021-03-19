@@ -9,6 +9,8 @@
 html {
   margin: 0px;
   padding: 0px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 body {
@@ -536,13 +538,13 @@ p {
 
 @media (min-width: 500px) {
   .galeria .galeria-img {
-    width: calc(100% /2);
+    width: calc(100% / 2);
   }
 }
 
 @media (min-width: 768px) {
   .episodios .episodios-content iframe {
-    width: calc(45% - 10vh + 2px);
+    width: calc(85%/2);
     margin: 5% 0% 0% 5%;
   }
   .galeria .galeria-img {

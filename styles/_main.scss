@@ -250,7 +250,7 @@
 @media (min-width: 500px){
     .galeria {
         .galeria-img{
-            width: calc(100% /2 );
+            width: calc(100% / 2 );
         }
     }  
 }
@@ -259,7 +259,7 @@
     .episodios {
         .episodios-content {
             iframe {
-                width: calc(45% - 10vh + 2px);
+                width: calc(85%/2);
                 margin: 5% 0% 0% 5%;
             }
         }
