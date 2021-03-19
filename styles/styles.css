@@ -401,8 +401,7 @@ p {
 }
 
 .galeria .galeria-img {
-  width: 320px;
-  height: 248px;
+  width: 100%;
   margin: 0px;
   padding: 0px;
 }
@@ -535,10 +534,19 @@ p {
   }
 }
 
+@media (min-width: 500px) {
+  .galeria .galeria-img {
+    width: calc(100% /2);
+  }
+}
+
 @media (min-width: 768px) {
   .episodios .episodios-content iframe {
-    width: calc(50% - 10vh + 2px);
+    width: calc(45% - 10vh + 2px);
     margin: 5% 0% 0% 5%;
+  }
+  .galeria .galeria-img {
+    width: calc(100% /3);
   }
 }
 
