@@ -8,7 +8,7 @@
 html {
     margin: 0px;
     padding: 0px;
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: auto;
 }
 
@@ -18,22 +18,7 @@ body {
     padding: 0px;
 }
 
-h2 {
-    @include IBMPlexSans-Small;
-    font-size: 36px;
-    color: #060A24;
-    letter-spacing: 0;
-    line-height: 42px;
-    font-weight: normal;
-    padding:0px 5% ;
-
-}
-
-p {
-    @include IBMPlexMono-Small;
-    font-size: 14px;
-    color: #060A24;
-    letter-spacing: 0;
-    line-height: 22px;
-    padding:0px 5% ;
+a {
+    text-decoration: none;
+    color: black;
 }
