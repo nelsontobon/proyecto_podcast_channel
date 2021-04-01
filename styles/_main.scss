@@ -113,6 +113,7 @@ p {
             //width: calc(33.3333% + 104px);
             width: 280px;
             margin: 5% 0% 0% 5%;
+            border: 0;
         }
 
     }
@@ -295,7 +296,7 @@ p {
             iframe {
                 width: calc(85%/2);
                 margin: 5% 0% 0% 5%;
-                border: 0;
+                
             }
         }
     }
