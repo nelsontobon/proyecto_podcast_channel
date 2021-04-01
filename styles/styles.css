@@ -522,6 +522,7 @@ p {
   .episodios .episodios-content iframe {
     width: calc(85%/2);
     margin: 5% 0% 0% 5%;
+    border: 0;
   }
   .img-phone {
     -webkit-box-pack: start;
